@@ -1,0 +1,12 @@
+{
+    "manifest_version": 2,
+    "name": "WePay persistent login",
+    "version": "0.1.0",
+    "description": "Prevent WePay from logging you out automatically, for inactivity, while you have a tab opened.",
+    "permissions": ["https://www.wepay.com/*"],
+    "content_scripts": [{
+        "matches": [ "https://www.wepay.com/*", "https://stage.wepay.com/*" ],
+        "js": [ "script.js" ],
+        "run_at": "document_end"
+    }]
+}
